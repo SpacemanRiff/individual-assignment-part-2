@@ -36,7 +36,7 @@ public class TicTacToeTest{
 		game.markLocation(2,0);
 		game.markLocation(2,2);
 		assertEquals(true,game.isThereADiagonalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -48,7 +48,7 @@ public class TicTacToeTest{
 		game.markLocation(0,1);
 		game.markLocation(2,0);
 		assertEquals(true,game.isThereADiagonalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -60,7 +60,7 @@ public class TicTacToeTest{
 		game.markLocation(2,0);
 		game.markLocation(0,2);
 		assertEquals(true,game.isThereAHorizontalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -72,7 +72,7 @@ public class TicTacToeTest{
 		game.markLocation(0,1);
 		game.markLocation(1,2);
 		assertEquals(true,game.isThereAHorizontalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -85,7 +85,7 @@ public class TicTacToeTest{
 		game.markLocation(1,0);
 		game.markLocation(2,2);
 		assertEquals(true,game.isThereAHorizontalWinner());
-		assertEquals("O is the winner",game.whoIsTheWinner());
+		assertEquals("O",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -97,7 +97,7 @@ public class TicTacToeTest{
 		game.markLocation(0,2);
 		game.markLocation(2,0);
 		assertEquals(true,game.isThereAVerticalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -109,7 +109,7 @@ public class TicTacToeTest{
 		game.markLocation(0,2);
 		game.markLocation(2,1);
 		assertEquals(true,game.isThereAVerticalWinner());
-		assertEquals("X is the winner",game.whoIsTheWinner());
+		assertEquals("X",game.whoIsTheWinner());
 	}
 	
 	@Test
@@ -122,7 +122,7 @@ public class TicTacToeTest{
 		game.markLocation(0,1);
 		game.markLocation(2,2);
 		assertEquals(true,game.isThereAVerticalWinner());
-		assertEquals("O is the winner",game.whoIsTheWinner());
+		assertEquals("O",game.whoIsTheWinner());
 	}
 	
 	@Test

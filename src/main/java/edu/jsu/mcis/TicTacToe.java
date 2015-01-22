@@ -11,7 +11,7 @@ public class TicTacToe{
 	
 	public TicTacToe(){
 		currentTurn = 0;
-		winner = "no one";
+		winner = "TIE";
 		isTheGameStillGoing = true;
 		PLAYER_1_SYMBOL = "X";
 		PLAYER_2_SYMBOL = "O";
@@ -28,17 +28,19 @@ public class TicTacToe{
 		
 	public void markLocation(int row, int col){
 		if(board[row][col].equals(EMPTY_SPACE_SYMBOL) && isTheGameStillGoing){
-			switch(currentTurn%2){
-				case 0: 
-					board[row][col] = PLAYER_1_SYMBOL;
-					break;
-				case 1: 
-					board[row][col] = PLAYER_2_SYMBOL;
-					break;
+			if(row >= 0 && row < 3 && col >= 0 && col < 3){
+				switch(currentTurn%2){
+					case 0: 
+						board[row][col] = PLAYER_1_SYMBOL;
+						break;
+					case 1: 
+						board[row][col] = PLAYER_2_SYMBOL;
+						break;
+				}
+				System.out.print(board[row][col] + " ");
+				checkToSeeIfTheGameIsOver();
+				currentTurn++;
 			}
-			System.out.print(board[row][col] + " ");
-			checkToSeeIfTheGameIsOver();
-			currentTurn++;
 		}
 	}
 	
@@ -100,8 +102,14 @@ public class TicTacToe{
 		return thereAreNoEmptySpaces;
 	}
 	
-	public int whatTurnIsIt(){
-		return currentTurn;
+	public String whoseTurnIsIt(){
+		if(currentTurn%2 == 0){
+			return PLAYER_1_SYMBOL;
+		}else if(currentTurn%2 == 1){
+			return PLAYER_2_SYMBOL;
+		}else{
+			return EMPTY_SPACE_SYMBOL;
+		}
 	}
 	
 	public boolean isTheGameOver(){
@@ -109,6 +117,6 @@ public class TicTacToe{
 	}
 	
 	public String whoIsTheWinner(){
-		return winner + " is the winner";
+		return winner;
 	}
 }
