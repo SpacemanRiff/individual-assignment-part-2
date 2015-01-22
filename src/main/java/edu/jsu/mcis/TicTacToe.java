@@ -1,17 +1,21 @@
 package edu.jsu.mcis;
 
 public class TicTacToe{
-	private String[][] board;
 	private int currentTurn;
-	private String winner; //winner chicken dinner
+	private String winner;
+	private boolean isTheGameStillGoing;
 	private final String PLAYER_1_SYMBOL;
 	private final String PLAYER_2_SYMBOL;
+	private final String EMPTY_SPACE_SYMBOL;
+	private String[][] board;
 	
 	public TicTacToe(){
 		currentTurn = 0;
 		winner = "no one";
+		isTheGameStillGoing = true;
 		PLAYER_1_SYMBOL = "X";
 		PLAYER_2_SYMBOL = "O";
+		EMPTY_SPACE_SYMBOL = " ";
 		
 		board = new String[3][];
 		for(int row = 0; row < 3; row++){
@@ -23,24 +27,88 @@ public class TicTacToe{
 	}
 		
 	public void markLocation(int row, int col){
-		switch(currentTurn%2){
-			case 0: 
-				board[row][col] = PLAYER_1_SYMBOL;
-				break;
-			case 1: 
-				board[row][col] = PLAYER_2_SYMBOL;
-				break;
+		if(board[row][col].equals(EMPTY_SPACE_SYMBOL) && isTheGameStillGoing){
+			switch(currentTurn%2){
+				case 0: 
+					board[row][col] = PLAYER_1_SYMBOL;
+					break;
+				case 1: 
+					board[row][col] = PLAYER_2_SYMBOL;
+					break;
+			}
+			System.out.print(board[row][col] + " ");
+			checkToSeeIfTheGameIsOver();
+			currentTurn++;
 		}
-		currentTurn++;
 	}
 	
 	public String whoControlsTheTileAt(int row, int col){
 		return board[row][col];
 	}
 	
-	private
+	public void checkToSeeIfTheGameIsOver(){
+		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner()){
+			isTheGameStillGoing = false;
+		}
+	}
 	
-	public String whoHasWon(){
-		return "nah";
+	public boolean isThereADiagonalWinner(){
+		if(board[0][0].equals(board[1][1]) && board[0][0].equals(board[2][2]) && !board[0][0].equals(EMPTY_SPACE_SYMBOL)){
+			winner = board[0][0];
+			return true;
+		}else if(board[0][2].equals(board[1][1]) && board[0][2].equals(board[2][0]) && !board[0][2].equals(EMPTY_SPACE_SYMBOL)){
+			winner = board[0][2];
+			return true;
+		}else{		
+			return false;
+		}
+	}
+	
+	public boolean isThereAHorizontalWinner(){
+		for(int i = 0; i < 3; i++){
+			if(board[i][0].equals(board[i][1]) && board[i][0].equals(board[i][2]) && !board[i][0].equals(EMPTY_SPACE_SYMBOL)){
+				winner = board[i][0];
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean isThereAVerticalWinner(){
+		for(int i = 0; i < 3; i++){
+			if(board[0][i].equals(board[1][i]) && board[0][i].equals(board[2][i]) && !board[0][i].equals(EMPTY_SPACE_SYMBOL)){
+				winner = board[0][i];
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean isTheBoardFull(){
+		boolean thereAreNoEmptySpaces = true;
+		int i = 0;
+		while(i<3 && thereAreNoEmptySpaces){
+			int j = 0;
+			while(j<3 && thereAreNoEmptySpaces){
+				if(board[i][j].equals(EMPTY_SPACE_SYMBOL)){
+					thereAreNoEmptySpaces = false;
+				}
+				j++;
+			}
+			i++;
+		}
+		return thereAreNoEmptySpaces;
+	}
+	
+	public int whatTurnIsIt(){
+		return currentTurn;
+	}
+	
+	public boolean isTheGameOver(){
+		return !isTheGameStillGoing;
+	}
+	
+	public String whoIsTheWinner(){
+		return winner + " is the winner";
 	}
 }
