@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2015-01-22T02:50:42" hostname="Scott-PC" time="0.06">
+<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2015-01-22T19:51:11" hostname="Scott-Laptop" time="0.04">
   <properties/>
-  <testcase name="testTopLeftToBottomRightWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.054"/>
-  <testcase name="testColumnThreeWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
+  <testcase name="testTopLeftToBottomRightWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.035"/>
+  <testcase name="testColumnThreeWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
   <testcase name="testNoPlacesOnceGameIsOver" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testIsTheBoardFull" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsTheBoardFull" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testColumnOneWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testColumnTwoWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
+  <testcase name="testColumnTwoWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testRowThreeWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testRowOneWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
+  <testcase name="testRowOneWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
   <testcase name="testRowTwoWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTopRightToBottomLeftWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <system-out><![CDATA[X O X O X X O X O X O X O X O X X O X O X O X O X X O X O X X O X O X X O X X X O X O X O X O X O X X O X O X X O X O X ]]></system-out>

@@ -1,5 +1,7 @@
 package edu.jsu.mcis;
 
+import java.util.Scanner;
+
 public class TicTacToe{
 	private int currentTurn;
 	private String winner;

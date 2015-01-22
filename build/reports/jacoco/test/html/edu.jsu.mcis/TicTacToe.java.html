@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TicTacToe.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">individual-assignment-part-1</a> &gt; <a href="index.source.html" class="el_package">edu.jsu.mcis</a> &gt; <span class="el_source">TicTacToe.java</span></div><h1>TicTacToe.java</h1><pre class="source lang-java linenums">package edu.jsu.mcis;
+
+import java.util.Scanner;
+
+public class TicTacToe{
+	private int currentTurn;
+	private String winner;
+	private boolean isTheGameStillGoing;
+	private final String PLAYER_1_SYMBOL;
+	private final String PLAYER_2_SYMBOL;
+	private final String EMPTY_SPACE_SYMBOL;
+	private String[][] board;
+	
+<span class="fc" id="L14">	public TicTacToe(){</span>
+<span class="fc" id="L15">		currentTurn = 0;</span>
+<span class="fc" id="L16">		winner = &quot;TIE&quot;;</span>
+<span class="fc" id="L17">		isTheGameStillGoing = true;</span>
+<span class="fc" id="L18">		PLAYER_1_SYMBOL = &quot;X&quot;;</span>
+<span class="fc" id="L19">		PLAYER_2_SYMBOL = &quot;O&quot;;</span>
+<span class="fc" id="L20">		EMPTY_SPACE_SYMBOL = &quot; &quot;;</span>
+		
+<span class="fc" id="L22">		board = new String[3][];</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">		for(int row = 0; row &lt; 3; row++){</span>
+<span class="fc" id="L24">			board[row] = new String[3];</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">			for(int col = 0; col &lt; 3; col++){</span>
+<span class="fc" id="L26">				board[row][col] = &quot; &quot;;</span>
+			}
+		}
+<span class="fc" id="L29">	}</span>
+		
+	public void markLocation(int row, int col){
+<span class="fc bfc" id="L32" title="All 4 branches covered.">		if(board[row][col].equals(EMPTY_SPACE_SYMBOL) &amp;&amp; isTheGameStillGoing){</span>
+<span class="pc bpc" id="L33" title="4 of 8 branches missed.">			if(row &gt;= 0 &amp;&amp; row &lt; 3 &amp;&amp; col &gt;= 0 &amp;&amp; col &lt; 3){</span>
+<span class="pc bpc" id="L34" title="1 of 3 branches missed.">				switch(currentTurn%2){</span>
+					case 0: 
+<span class="fc" id="L36">						board[row][col] = PLAYER_1_SYMBOL;</span>
+<span class="fc" id="L37">						break;</span>
+					case 1: 
+<span class="fc" id="L39">						board[row][col] = PLAYER_2_SYMBOL;</span>
+						break;
+				}
+<span class="fc" id="L42">				System.out.print(board[row][col] + &quot; &quot;);</span>
+<span class="fc" id="L43">				checkToSeeIfTheGameIsOver();</span>
+<span class="fc" id="L44">				currentTurn++;</span>
+			}
+		}
+<span class="fc" id="L47">	}</span>
+	
+	public String whoControlsTheTileAt(int row, int col){
+<span class="fc" id="L50">		return board[row][col];</span>
+	}
+	
+	public void checkToSeeIfTheGameIsOver(){
+<span class="fc bfc" id="L54" title="All 6 branches covered.">		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner()){</span>
+<span class="fc" id="L55">			isTheGameStillGoing = false;</span>
+		}
+<span class="fc" id="L57">	}</span>
+	
+	public boolean isThereADiagonalWinner(){
+<span class="fc bfc" id="L60" title="All 6 branches covered.">		if(board[0][0].equals(board[1][1]) &amp;&amp; board[0][0].equals(board[2][2]) &amp;&amp; !board[0][0].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="fc" id="L61">			winner = board[0][0];</span>
+<span class="fc" id="L62">			return true;</span>
+<span class="fc bfc" id="L63" title="All 6 branches covered.">		}else if(board[0][2].equals(board[1][1]) &amp;&amp; board[0][2].equals(board[2][0]) &amp;&amp; !board[0][2].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="fc" id="L64">			winner = board[0][2];</span>
+<span class="fc" id="L65">			return true;</span>
+		}else{		
+<span class="fc" id="L67">			return false;</span>
+		}
+	}
+	
+	public boolean isThereAHorizontalWinner(){
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
+<span class="fc bfc" id="L73" title="All 6 branches covered.">			if(board[i][0].equals(board[i][1]) &amp;&amp; board[i][0].equals(board[i][2]) &amp;&amp; !board[i][0].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="fc" id="L74">				winner = board[i][0];</span>
+<span class="fc" id="L75">				return true;</span>
+			}
+		}
+<span class="fc" id="L78">		return false;</span>
+	}
+	
+	public boolean isThereAVerticalWinner(){
+<span class="fc bfc" id="L82" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
+<span class="fc bfc" id="L83" title="All 6 branches covered.">			if(board[0][i].equals(board[1][i]) &amp;&amp; board[0][i].equals(board[2][i]) &amp;&amp; !board[0][i].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="fc" id="L84">				winner = board[0][i];</span>
+<span class="fc" id="L85">				return true;</span>
+			}
+		}
+<span class="fc" id="L88">		return false;</span>
+	}
+	
+	public boolean isTheBoardFull(){
+<span class="nc" id="L92">		boolean thereAreNoEmptySpaces = true;</span>
+<span class="nc" id="L93">		int i = 0;</span>
+<span class="nc bnc" id="L94" title="All 4 branches missed.">		while(i&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
+<span class="nc" id="L95">			int j = 0;</span>
+<span class="nc bnc" id="L96" title="All 4 branches missed.">			while(j&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">				if(board[i][j].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="nc" id="L98">					thereAreNoEmptySpaces = false;</span>
+				}
+<span class="nc" id="L100">				j++;</span>
+			}
+<span class="nc" id="L102">			i++;</span>
+<span class="nc" id="L103">		}</span>
+<span class="nc" id="L104">		return thereAreNoEmptySpaces;</span>
+	}
+	
+	public String whoseTurnIsIt(){
+<span class="nc bnc" id="L108" title="All 2 branches missed.">		if(currentTurn%2 == 0){</span>
+<span class="nc" id="L109">			return PLAYER_1_SYMBOL;</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">		}else if(currentTurn%2 == 1){</span>
+<span class="nc" id="L111">			return PLAYER_2_SYMBOL;</span>
+		}else{
+<span class="nc" id="L113">			return EMPTY_SPACE_SYMBOL;</span>
+		}
+	}
+	
+	public boolean isTheGameOver(){
+<span class="nc bnc" id="L118" title="All 2 branches missed.">		return !isTheGameStillGoing;</span>
+	}
+	
+	public String whoIsTheWinner(){
+<span class="fc" id="L122">		return winner;</span>
+	}	
+	
+	public static void main(String[] args){
+<span class="nc" id="L126">		TicTacToe game = new TicTacToe();</span>
+<span class="nc" id="L127">		String previousPlayer = &quot; &quot;;</span>
+		
+<span class="nc bnc" id="L129" title="All 2 branches missed.">		while(!game.isTheGameOver()){</span>
+<span class="nc" id="L130">			Scanner input = new Scanner(System.in);</span>
+<span class="nc" id="L131">			int rowInput = -1; </span>
+<span class="nc" id="L132">			int columnInput = -1;</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">			if(previousPlayer.equals(game.whoseTurnIsIt())){			</span>
+<span class="nc" id="L134">				System.out.println(&quot;That space was not available.&quot;);</span>
+			}
+			
+<span class="nc" id="L137">			System.out.println(&quot;It is player &quot; + game.whoseTurnIsIt() + &quot;\'s turn.&quot;);</span>
+<span class="nc" id="L138">			System.out.print(&quot;Please enter your desired row: &quot;);</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">			while(rowInput == -1){</span>
+				try{
+<span class="nc" id="L141">					rowInput = input.nextInt();</span>
+<span class="nc" id="L142">				}catch(Exception ex){</span>
+<span class="nc" id="L143">					System.out.print(&quot;Invalid input. Please try again: &quot;);</span>
+<span class="nc" id="L144">				}</span>
+			}
+			
+<span class="nc" id="L147">			System.out.print(&quot;Please enter your desired column: &quot;);</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">			while(columnInput == -1){</span>
+				try{
+<span class="nc" id="L150">					columnInput = input.nextInt();</span>
+<span class="nc" id="L151">				}catch(Exception ex){</span>
+<span class="nc" id="L152">					System.out.print(&quot;Invalid input. Please try again: &quot;);</span>
+<span class="nc" id="L153">				}</span>
+			}
+<span class="nc" id="L155">			previousPlayer = game.whoseTurnIsIt();</span>
+			
+<span class="nc" id="L157">			game.markLocation(rowInput, columnInput);</span>
+<span class="nc" id="L158">		}</span>
+		
+<span class="nc" id="L160">		System.out.println(game.whoIsTheWinner());</span>
+<span class="nc" id="L161">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

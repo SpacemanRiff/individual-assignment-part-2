@@ -1,3 +1,5 @@
+*** Settings ***
+Library			TicTacToeKeyWords
  
 *** Test Cases ***
 Win Diagonally as X
