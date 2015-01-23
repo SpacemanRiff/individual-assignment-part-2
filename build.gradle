@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 
 sourceCompatibility = 1.7
-version = '0.1'
+version = '1.0'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Tic Tac Toe', 
