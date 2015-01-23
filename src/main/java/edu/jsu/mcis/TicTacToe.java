@@ -6,10 +6,10 @@ public class TicTacToe{
 	private int currentTurn;
 	private String winner;
 	private boolean isTheGameStillGoing;
-	private final String PLAYER_1_SYMBOL;
-	private final String PLAYER_2_SYMBOL;
-	private final String EMPTY_SPACE_SYMBOL;
 	private String[][] board;
+	public final String PLAYER_1_SYMBOL;
+	public final String PLAYER_2_SYMBOL;
+	public final String EMPTY_SPACE_SYMBOL;
 	
 	public TicTacToe(){
 		currentTurn = 0;
@@ -39,7 +39,6 @@ public class TicTacToe{
 						board[row][col] = PLAYER_2_SYMBOL;
 						break;
 				}
-				System.out.print(board[row][col] + " ");
 				checkToSeeIfTheGameIsOver();
 				currentTurn++;
 			}

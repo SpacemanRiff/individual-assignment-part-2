@@ -15,8 +15,11 @@ public class TicTacToeInterface{
 		while(!game.isTheGameOver()){
 			getUserInput();
 		}
-		
-		System.out.println(game.whoIsTheWinner());
+		if(!game.whoIsTheWinner().equals(game.EMPTY_SPACE_SYMBOL)){
+			System.out.println(game.whoIsTheWinner()+ " is the Winner!");
+		}else{
+			System.out.println(game.whoIsTheWinner() + " game!");
+		}
 	}
 	
 	public void getUserInput(){
@@ -57,6 +60,7 @@ public class TicTacToeInterface{
 	}
 	
 	public void drawBoard(){
+		System.out.println();
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 3; j++){
 				System.out.print(game.whoControlsTheTileAt(i,j));
@@ -64,13 +68,16 @@ public class TicTacToeInterface{
 					System.out.print("|");
 				}
 			}
+			System.out.println();
 			if(i != 2){
-				System.out.print("-----");
+				System.out.println("-----");
 			}
 		}
+		System.out.println();
 	}
 	
 	public static void main(String[] args){
+		System.out.println();
 		TicTacToeInterface gameInterface = new TicTacToeInterface();
 		gameInterface.playGame();
 	}
