@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.7.0_67)" generated="20150123 18:13:50.023">
+<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.7.0_67)" generated="20150123 18:18:36.993">
 <suite source="C:\Users\Scotty Bwoi\Documents\GitHub\individual-assignment-part-1\acceptance\TicTacToeTests.txt" id="s1" name="TicTacToeTests">
 <test id="s1-t1" name="Win Diagonally as X">
 <kw type="kw" name="TicTacToeKeywords.Start New Game">
 <doc></doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.688" starttime="20150123 18:13:50.678"></status>
+<status status="PASS" endtime="20150123 18:18:37.565" starttime="20150123 18:18:37.556"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -14,12 +14,12 @@
 <arg>1</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.700" level="INFO">| | 
+<msg timestamp="20150123 18:18:37.573" level="INFO">| | 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.701" starttime="20150123 18:13:50.694"></status>
+<status status="PASS" endtime="20150123 18:18:37.574" starttime="20150123 18:18:37.568"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -28,7 +28,7 @@
 <arg>1</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.710" starttime="20150123 18:13:50.705"></status>
+<status status="PASS" endtime="20150123 18:18:37.581" starttime="20150123 18:18:37.577"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -36,12 +36,12 @@
 <arg>0</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.717" level="INFO">|O| 
+<msg timestamp="20150123 18:18:37.587" level="INFO">|O| 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.718" starttime="20150123 18:13:50.712"></status>
+<status status="PASS" endtime="20150123 18:18:37.589" starttime="20150123 18:18:37.583"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -50,7 +50,7 @@
 <arg>1</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.727" starttime="20150123 18:13:50.722"></status>
+<status status="PASS" endtime="20150123 18:18:37.595" starttime="20150123 18:18:37.591"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -58,12 +58,12 @@
 <arg>0</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.735" level="INFO">X|O| 
+<msg timestamp="20150123 18:18:37.601" level="INFO">X|O| 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.736" starttime="20150123 18:13:50.730"></status>
+<status status="PASS" endtime="20150123 18:18:37.602" starttime="20150123 18:18:37.597"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -72,7 +72,7 @@
 <arg>0</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.744" starttime="20150123 18:13:50.740"></status>
+<status status="PASS" endtime="20150123 18:18:37.609" starttime="20150123 18:18:37.604"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -80,12 +80,12 @@
 <arg>0</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.752" level="INFO">X|O|O
+<msg timestamp="20150123 18:18:37.616" level="INFO">X|O|O
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.753" starttime="20150123 18:13:50.746"></status>
+<status status="PASS" endtime="20150123 18:18:37.617" starttime="20150123 18:18:37.611"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -94,7 +94,7 @@
 <arg>2</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.764" starttime="20150123 18:13:50.760"></status>
+<status status="PASS" endtime="20150123 18:18:37.621" starttime="20150123 18:18:37.618"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -102,12 +102,12 @@
 <arg>2</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.774" level="INFO">X|O|O
+<msg timestamp="20150123 18:18:37.626" level="INFO">X|O|O
 -----
  |X| 
 -----
  | |X</msg>
-<status status="PASS" endtime="20150123 18:13:50.776" starttime="20150123 18:13:50.768"></status>
+<status status="PASS" endtime="20150123 18:18:37.627" starttime="20150123 18:18:37.623"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -116,26 +116,26 @@
 <arg>2</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.783" starttime="20150123 18:13:50.779"></status>
+<status status="PASS" endtime="20150123 18:18:37.631" starttime="20150123 18:18:37.628"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Winner Should Be">
 <doc></doc>
 <arguments>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.791" starttime="20150123 18:13:50.786"></status>
+<status status="PASS" endtime="20150123 18:18:37.635" starttime="20150123 18:18:37.633"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" critical="yes" endtime="20150123 18:13:50.793" starttime="20150123 18:13:50.666"></status>
+<status status="PASS" critical="yes" endtime="20150123 18:18:37.637" starttime="20150123 18:18:37.547"></status>
 </test>
 <test id="s1-t2" name="Win Horizontally as O">
 <kw type="kw" name="TicTacToeKeywords.Start New Game">
 <doc></doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.811" starttime="20150123 18:13:50.808"></status>
+<status status="PASS" endtime="20150123 18:18:37.650" starttime="20150123 18:18:37.647"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -143,12 +143,12 @@
 <arg>1</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.819" level="INFO">| | 
+<msg timestamp="20150123 18:18:37.654" level="INFO">| | 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.820" starttime="20150123 18:13:50.813"></status>
+<status status="PASS" endtime="20150123 18:18:37.655" starttime="20150123 18:18:37.652"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -157,7 +157,7 @@
 <arg>1</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.829" starttime="20150123 18:13:50.824"></status>
+<status status="PASS" endtime="20150123 18:18:37.659" starttime="20150123 18:18:37.657"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -165,12 +165,12 @@
 <arg>2</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.837" level="INFO">| | 
+<msg timestamp="20150123 18:18:37.665" level="INFO">| | 
 -----
  |X| 
 -----
 O| |</msg>
-<status status="PASS" endtime="20150123 18:13:50.838" starttime="20150123 18:13:50.832"></status>
+<status status="PASS" endtime="20150123 18:18:37.665" starttime="20150123 18:18:37.661"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -179,7 +179,7 @@ O| |</msg>
 <arg>0</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.845" starttime="20150123 18:13:50.841"></status>
+<status status="PASS" endtime="20150123 18:18:37.671" starttime="20150123 18:18:37.667"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -187,12 +187,12 @@ O| |</msg>
 <arg>0</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.853" level="INFO">X| | 
+<msg timestamp="20150123 18:18:37.678" level="INFO">X| | 
 -----
  |X| 
 -----
 O| |</msg>
-<status status="PASS" endtime="20150123 18:13:50.854" starttime="20150123 18:13:50.848"></status>
+<status status="PASS" endtime="20150123 18:18:37.678" starttime="20150123 18:18:37.673"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -201,7 +201,7 @@ O| |</msg>
 <arg>0</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.861" starttime="20150123 18:13:50.857"></status>
+<status status="PASS" endtime="20150123 18:18:37.684" starttime="20150123 18:18:37.681"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -209,12 +209,12 @@ O| |</msg>
 <arg>2</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.870" level="INFO">X| | 
+<msg timestamp="20150123 18:18:37.689" level="INFO">X| | 
 -----
  |X| 
 -----
 O| |O</msg>
-<status status="PASS" endtime="20150123 18:13:50.871" starttime="20150123 18:13:50.865"></status>
+<status status="PASS" endtime="20150123 18:18:37.690" starttime="20150123 18:18:37.686"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -223,7 +223,7 @@ O| |O</msg>
 <arg>2</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.880" starttime="20150123 18:13:50.875"></status>
+<status status="PASS" endtime="20150123 18:18:37.697" starttime="20150123 18:18:37.693"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -231,12 +231,12 @@ O| |O</msg>
 <arg>0</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.889" level="INFO">X| |X
+<msg timestamp="20150123 18:18:37.704" level="INFO">X| |X
 -----
  |X| 
 -----
 O| |O</msg>
-<status status="PASS" endtime="20150123 18:13:50.891" starttime="20150123 18:13:50.885"></status>
+<status status="PASS" endtime="20150123 18:18:37.705" starttime="20150123 18:18:37.701"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -245,7 +245,7 @@ O| |O</msg>
 <arg>2</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.905" starttime="20150123 18:13:50.901"></status>
+<status status="PASS" endtime="20150123 18:18:37.710" starttime="20150123 18:18:37.707"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -253,12 +253,12 @@ O| |O</msg>
 <arg>2</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.909" level="INFO">X| |X
+<msg timestamp="20150123 18:18:37.715" level="INFO">X| |X
 -----
  |X| 
 -----
 O|O|O</msg>
-<status status="PASS" endtime="20150123 18:13:50.910" starttime="20150123 18:13:50.906"></status>
+<status status="PASS" endtime="20150123 18:18:37.716" starttime="20150123 18:18:37.712"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -267,26 +267,26 @@ O|O|O</msg>
 <arg>1</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.917" starttime="20150123 18:13:50.913"></status>
+<status status="PASS" endtime="20150123 18:18:37.721" starttime="20150123 18:18:37.717"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Winner Should Be">
 <doc></doc>
 <arguments>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.921" starttime="20150123 18:13:50.919"></status>
+<status status="PASS" endtime="20150123 18:18:37.727" starttime="20150123 18:18:37.724"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" critical="yes" endtime="20150123 18:13:50.923" starttime="20150123 18:13:50.799"></status>
+<status status="PASS" critical="yes" endtime="20150123 18:18:37.729" starttime="20150123 18:18:37.640"></status>
 </test>
 <test id="s1-t3" name="Force a Tie">
 <kw type="kw" name="TicTacToeKeywords.Start New Game">
 <doc></doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.935" starttime="20150123 18:13:50.933"></status>
+<status status="PASS" endtime="20150123 18:18:37.744" starttime="20150123 18:18:37.740"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -294,12 +294,12 @@ O|O|O</msg>
 <arg>1</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.941" level="INFO">| | 
+<msg timestamp="20150123 18:18:37.749" level="INFO">| | 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.943" starttime="20150123 18:13:50.938"></status>
+<status status="PASS" endtime="20150123 18:18:37.751" starttime="20150123 18:18:37.746"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -308,7 +308,7 @@ O|O|O</msg>
 <arg>1</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.948" starttime="20150123 18:13:50.945"></status>
+<status status="PASS" endtime="20150123 18:18:37.756" starttime="20150123 18:18:37.753"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -316,12 +316,12 @@ O|O|O</msg>
 <arg>0</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.957" level="INFO">O| | 
+<msg timestamp="20150123 18:18:37.762" level="INFO">O| | 
 -----
  |X| 
 -----
  | |</msg>
-<status status="PASS" endtime="20150123 18:13:50.958" starttime="20150123 18:13:50.953"></status>
+<status status="PASS" endtime="20150123 18:18:37.763" starttime="20150123 18:18:37.759"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -330,7 +330,7 @@ O|O|O</msg>
 <arg>0</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.965" starttime="20150123 18:13:50.962"></status>
+<status status="PASS" endtime="20150123 18:18:37.769" starttime="20150123 18:18:37.765"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -338,12 +338,12 @@ O|O|O</msg>
 <arg>2</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.973" level="INFO">O| | 
+<msg timestamp="20150123 18:18:37.775" level="INFO">O| | 
 -----
  |X| 
 -----
 X| |</msg>
-<status status="PASS" endtime="20150123 18:13:50.974" starttime="20150123 18:13:50.969"></status>
+<status status="PASS" endtime="20150123 18:18:37.777" starttime="20150123 18:18:37.771"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -352,7 +352,7 @@ X| |</msg>
 <arg>0</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.980" starttime="20150123 18:13:50.976"></status>
+<status status="PASS" endtime="20150123 18:18:37.784" starttime="20150123 18:18:37.780"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -360,12 +360,12 @@ X| |</msg>
 <arg>0</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.986" level="INFO">O| |O
+<msg timestamp="20150123 18:18:37.790" level="INFO">O| |O
 -----
  |X| 
 -----
 X| |</msg>
-<status status="PASS" endtime="20150123 18:13:50.987" starttime="20150123 18:13:50.983"></status>
+<status status="PASS" endtime="20150123 18:18:37.791" starttime="20150123 18:18:37.786"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -374,7 +374,7 @@ X| |</msg>
 <arg>2</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:50.992" starttime="20150123 18:13:50.989"></status>
+<status status="PASS" endtime="20150123 18:18:37.796" starttime="20150123 18:18:37.793"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -382,12 +382,12 @@ X| |</msg>
 <arg>0</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:50.999" level="INFO">O|X|O
+<msg timestamp="20150123 18:18:37.804" level="INFO">O|X|O
 -----
  |X| 
 -----
 X| |</msg>
-<status status="PASS" endtime="20150123 18:13:51.000" starttime="20150123 18:13:50.995"></status>
+<status status="PASS" endtime="20150123 18:18:37.805" starttime="20150123 18:18:37.799"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -396,7 +396,7 @@ X| |</msg>
 <arg>1</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.006" starttime="20150123 18:13:51.004"></status>
+<status status="PASS" endtime="20150123 18:18:37.810" starttime="20150123 18:18:37.808"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -404,12 +404,12 @@ X| |</msg>
 <arg>2</arg>
 <arg>1</arg>
 </arguments>
-<msg timestamp="20150123 18:13:51.010" level="INFO">O|X|O
+<msg timestamp="20150123 18:18:37.814" level="INFO">O|X|O
 -----
  |X| 
 -----
 X|O|</msg>
-<status status="PASS" endtime="20150123 18:13:51.011" starttime="20150123 18:13:51.008"></status>
+<status status="PASS" endtime="20150123 18:18:37.814" starttime="20150123 18:18:37.812"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -418,7 +418,7 @@ X|O|</msg>
 <arg>1</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.015" starttime="20150123 18:13:51.012"></status>
+<status status="PASS" endtime="20150123 18:18:37.818" starttime="20150123 18:18:37.816"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -426,12 +426,12 @@ X|O|</msg>
 <arg>1</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:51.018" level="INFO">O|X|O
+<msg timestamp="20150123 18:18:37.822" level="INFO">O|X|O
 -----
  |X|X
 -----
 X|O|</msg>
-<status status="PASS" endtime="20150123 18:13:51.019" starttime="20150123 18:13:51.016"></status>
+<status status="PASS" endtime="20150123 18:18:37.822" starttime="20150123 18:18:37.820"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -440,7 +440,7 @@ X|O|</msg>
 <arg>2</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.025" starttime="20150123 18:13:51.021"></status>
+<status status="PASS" endtime="20150123 18:18:37.825" starttime="20150123 18:18:37.823"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -448,12 +448,12 @@ X|O|</msg>
 <arg>1</arg>
 <arg>0</arg>
 </arguments>
-<msg timestamp="20150123 18:13:51.029" level="INFO">O|X|O
+<msg timestamp="20150123 18:18:37.829" level="INFO">O|X|O
 -----
 O|X|X
 -----
 X|O|</msg>
-<status status="PASS" endtime="20150123 18:13:51.029" starttime="20150123 18:13:51.026"></status>
+<status status="PASS" endtime="20150123 18:18:37.829" starttime="20150123 18:18:37.827"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -462,7 +462,7 @@ X|O|</msg>
 <arg>0</arg>
 <arg>O</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.033" starttime="20150123 18:13:51.031"></status>
+<status status="PASS" endtime="20150123 18:18:37.833" starttime="20150123 18:18:37.830"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Mark Location">
 <doc></doc>
@@ -470,12 +470,12 @@ X|O|</msg>
 <arg>2</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20150123 18:13:51.038" level="INFO">O|X|O
+<msg timestamp="20150123 18:18:37.836" level="INFO">O|X|O
 -----
 O|X|X
 -----
 X|O|X</msg>
-<status status="PASS" endtime="20150123 18:13:51.039" starttime="20150123 18:13:51.035"></status>
+<status status="PASS" endtime="20150123 18:18:37.837" starttime="20150123 18:18:37.834"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Location Should Be">
 <doc></doc>
@@ -484,24 +484,24 @@ X|O|X</msg>
 <arg>2</arg>
 <arg>X</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.044" starttime="20150123 18:13:51.041"></status>
+<status status="PASS" endtime="20150123 18:18:37.840" starttime="20150123 18:18:37.838"></status>
 </kw>
 <kw type="kw" name="TicTacToeKeywords.Winner Should Be">
 <doc></doc>
 <arguments>
 <arg>TIE</arg>
 </arguments>
-<status status="PASS" endtime="20150123 18:13:51.049" starttime="20150123 18:13:51.046"></status>
+<status status="PASS" endtime="20150123 18:18:37.843" starttime="20150123 18:18:37.841"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" critical="yes" endtime="20150123 18:13:51.050" starttime="20150123 18:13:50.926"></status>
+<status status="PASS" critical="yes" endtime="20150123 18:18:37.844" starttime="20150123 18:18:37.733"></status>
 </test>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150123 18:13:51.058" starttime="20150123 18:13:50.034"></status>
+<status status="PASS" endtime="20150123 18:18:37.847" starttime="20150123 18:18:37.004"></status>
 </suite>
 <statistics>
 <total>
