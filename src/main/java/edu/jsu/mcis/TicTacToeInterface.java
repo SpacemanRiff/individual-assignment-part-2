@@ -3,8 +3,8 @@ package edu.jsu.mcis;
 import java.util.Scanner;
 
 public class TicTacToeInterface{		
-	TicTacToe game;
-	String previousPlayer;
+	private TicTacToe game;
+	private String previousPlayer;
 	
 	public TicTacToeInterface(){		
 		game = new TicTacToe();
@@ -16,9 +16,9 @@ public class TicTacToeInterface{
 			getUserInput();
 		}
 		if(!game.whoIsTheWinner().equals(game.EMPTY_SPACE_SYMBOL)){
-			System.out.println(game.whoIsTheWinner()+ " is the Winner!");
+			System.out.println(whoWon() + " is the Winner!");
 		}else{
-			System.out.println(game.whoIsTheWinner() + " game!");
+			System.out.println(whoWon() + " game!");
 		}
 	}
 	
@@ -34,7 +34,7 @@ public class TicTacToeInterface{
 		System.out.print("Please enter your desired row: ");
 		while(rowInput == -1){
 			try{
-				rowInput = input.nextInt();
+				rowInput = Integer.parseInt(input.next());
 			}catch(Exception ex){
 				System.out.print("Invalid input. Please try again: ");
 			}
@@ -59,11 +59,19 @@ public class TicTacToeInterface{
 		drawBoard();
 	}
 	
+	public String whoControlsThisTile(int row, int column){
+		return game.whoControlsTheTileAt(row, column);
+	}
+	
+	public String whoWon(){
+		return game.whoIsTheWinner();
+	}
+	
 	public void drawBoard(){
 		System.out.println();
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 3; j++){
-				System.out.print(game.whoControlsTheTileAt(i,j));
+				System.out.print(whoControlsThisTile(i,j));
 				if(j != 2){
 					System.out.print("|");
 				}

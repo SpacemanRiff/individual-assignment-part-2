@@ -1,5 +1,5 @@
 *** Settings ***
-Library			TicTacToeKeyWords
+Library			TicTacToeKeywords
  
 *** Test Cases ***
 Win Diagonally as X

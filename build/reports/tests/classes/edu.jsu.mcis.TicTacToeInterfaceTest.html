@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class edu.jsu.mcis.TicTacToeTest</title>
+<title>Test results - Class edu.jsu.mcis.TicTacToeInterfaceTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class edu.jsu.mcis.TicTacToeTest</h1>
+<h1>Class edu.jsu.mcis.TicTacToeInterfaceTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/edu.jsu.mcis.html">edu.jsu.mcis</a> &gt; TicTacToeTest</div>
+<a href="../packages/edu.jsu.mcis.html">edu.jsu.mcis</a> &gt; TicTacToeInterfaceTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">13</div>
+<div class="counter">6</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.009s</div>
+<div class="counter">0.123s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,6 +63,9 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -75,71 +78,217 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testColumnOneWin</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testColumnThreeWin</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testColumnTwoWin</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testIsTheBoardFull</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testNoPlacesOnceGameIsOver</td>
 <td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testRowOneWin</td>
-<td>0s</td>
+<td class="success">testIfXHasWonThroughTheInterface</td>
+<td>0.107s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testRowThreeWin</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testRowTwoWin</td>
-<td>0.001s</td>
+<td class="success">testIsTheBoardFullThroughTheInterface</td>
+<td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testTileCannotBeOverWritten</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testTileWrittenWithO</td>
-<td>0s</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testTileWrittenWithX</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testTopLeftToBottomRightWin</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testTopRightToBottomLeftWin</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+ |X| 
+-----
+ | | 
+-----
+ | | 
+
+
+O|X| 
+-----
+ | | 
+-----
+ | | 
+
+
+O|X| 
+-----
+ |X| 
+-----
+ | | 
+
+
+O|X|O
+-----
+ |X| 
+-----
+ | | 
+
+
+O|X|O
+-----
+ |X| 
+-----
+ |X| 
+
+
+X| | 
+-----
+ | | 
+-----
+ | | 
+
+
+X|O| 
+-----
+ | | 
+-----
+ | | 
+
+
+X|O|X
+-----
+ | | 
+-----
+ | | 
+
+
+X|O|X
+-----
+ | | 
+-----
+O| | 
+
+
+X|O|X
+-----
+ | | 
+-----
+O|X| 
+
+
+X|O|X
+-----
+ | | 
+-----
+O|X|O
+
+
+X|O|X
+-----
+X| | 
+-----
+O|X|O
+
+
+X|O|X
+-----
+X|O| 
+-----
+O|X|O
+
+
+X|O|X
+-----
+X|O|X
+-----
+O|X|O
+
+
+ | | 
+-----
+ |X| 
+-----
+ | | 
+
+
+ | |O
+-----
+ |X| 
+-----
+ | | 
+
+
+X| |O
+-----
+ |X| 
+-----
+ | | 
+
+
+X| |O
+-----
+ |X|O
+-----
+ | | 
+
+
+X|X|O
+-----
+ |X|O
+-----
+ | | 
+
+
+X|X|O
+-----
+ |X|O
+-----
+ | |O
+
+
+X| | 
+-----
+ | | 
+-----
+ | | 
+
+
+X| | 
+-----
+O| | 
+-----
+ | | 
+
+
+X| | 
+-----
+ | | 
+-----
+ | | 
+
+
+X| | 
+-----
+ | | 
+-----
+ | | 
+
+
+X| | 
+-----
+ | | 
+-----
+ | | 
+
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">

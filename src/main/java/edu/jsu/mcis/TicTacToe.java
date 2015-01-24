@@ -29,8 +29,8 @@ public class TicTacToe{
 	}
 		
 	public void markLocation(int row, int col){
-		if(board[row][col].equals(EMPTY_SPACE_SYMBOL) && isTheGameStillGoing){
-			if(row >= 0 && row < 3 && col >= 0 && col < 3){
+		if(row >= 0 && row < 3 && col >= 0 && col < 3){
+			if(board[row][col].equals(EMPTY_SPACE_SYMBOL) && isTheGameStillGoing){
 				switch(currentTurn%2){
 					case 0: 
 						board[row][col] = PLAYER_1_SYMBOL;
@@ -50,7 +50,7 @@ public class TicTacToe{
 	}
 	
 	public void checkToSeeIfTheGameIsOver(){
-		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner()){
+		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner() || isTheBoardFull()){
 			isTheGameStillGoing = false;
 		}
 	}

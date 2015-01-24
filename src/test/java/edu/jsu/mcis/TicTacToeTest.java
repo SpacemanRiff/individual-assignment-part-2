@@ -149,5 +149,6 @@ public class TicTacToeTest{
 		game.markLocation(1,0);			
 		game.markLocation(1,1);	
 		game.markLocation(1,2);
+		assertEquals(true,game.isTheGameOver());
 	}
 }
