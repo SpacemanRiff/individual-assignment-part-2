@@ -4,16 +4,23 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class TicTacToeTest{
+	TicTacToe game;
+	
+	@Before
+	public void setupTests(){
+		game = new TicTacToe();
+	}
+	
 	@Test
 	public void testTileWrittenWithX(){
-		TicTacToe game = new TicTacToe();
+		setupTests();
 		game.markLocation(0,0);
 		assertEquals("X",game.whoControlsTheTileAt(0,0));
 	}
 	
 	@Test
 	public void testTileWrittenWithO(){
-		TicTacToe game = new TicTacToe();
+		setupTests();
 		game.markLocation(0,0);
 		game.markLocation(1,0);
 		assertEquals("O",game.whoControlsTheTileAt(1,0));
@@ -21,7 +28,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testTileCannotBeOverWritten(){
-		TicTacToe game = new TicTacToe();
+		setupTests();
 		game.markLocation(0,0);		
 		game.markLocation(0,0);
 		assertEquals("X",game.whoControlsTheTileAt(0,0));
@@ -29,7 +36,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testTopLeftToBottomRightWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,0);
 		game.markLocation(1,0);		
 		game.markLocation(1,1);
@@ -41,7 +48,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testTopRightToBottomLeftWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,2);
 		game.markLocation(1,0);		
 		game.markLocation(1,1);
@@ -53,7 +60,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testRowOneWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,0);
 		game.markLocation(1,0);		
 		game.markLocation(0,1);
@@ -65,7 +72,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testRowTwoWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(1,0);
 		game.markLocation(0,0);		
 		game.markLocation(1,1);
@@ -77,7 +84,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testRowThreeWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,0);
 		game.markLocation(2,0);
 		game.markLocation(0,1);		
@@ -90,7 +97,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testColumnOneWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,0);
 		game.markLocation(0,1);		
 		game.markLocation(1,0);
@@ -102,7 +109,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testColumnTwoWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,1);
 		game.markLocation(0,0);		
 		game.markLocation(1,1);
@@ -114,7 +121,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testColumnThreeWin(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(1,1);	
 		game.markLocation(0,2);
 		game.markLocation(0,0);		
@@ -127,7 +134,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testNoPlacesOnceGameIsOver(){
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,1);
 		game.markLocation(0,0);		
 		game.markLocation(1,1);
@@ -139,7 +146,7 @@ public class TicTacToeTest{
 	
 	@Test
 	public void testIsTheBoardFull(){		
-		TicTacToe game = new TicTacToe();		
+		setupTests();		
 		game.markLocation(0,0);			
 		game.markLocation(0,1);	
 		game.markLocation(0,2);	
