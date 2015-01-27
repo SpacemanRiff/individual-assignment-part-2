@@ -11,11 +11,11 @@ public class TicTacToeKeywords{
 		ticTacToe.sendDataToBoard(row, column);
 	}
 	
-	public boolean locationShouldBe(int row, int column, String shouldBe){
-		return ticTacToe.whoControlsThisTile(row, column).equals(shouldBe);
+	public String getTileOwner(int row, int column){
+		return ticTacToe.whoControlsThisTile(row, column);
 	}
 	
-	public boolean winnerShouldBe(String shouldBe){
-		return ticTacToe.whoWon().equals(shouldBe);
+	public String getWinner(){
+		return ticTacToe.whoWon();
 	}
 }

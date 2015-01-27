@@ -1,5 +1,15 @@
 *** Settings ***
-Library			TicTacToeKeywords
+Library			        TicTacToeKeywords
+
+*** Keywords ***
+
+Location Should Be  [Arguments]  ${row}  ${column}  ${expected}
+    ${owner}=  Get Tile Owner  ${row}  ${column}
+    Should Be Equal  ${owner}  ${expected}
+    
+Winner Should Be  [Arguments]  ${expected}
+    ${winner}=  Get Winner
+    Should Be Equal  ${winner}  ${expected}
  
 *** Test Cases ***
 Win Diagonally as X
