@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeInterfaceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-01-27T20:36:29" hostname="Scott-Laptop" time="0.172">
+<testsuite name="edu.jsu.mcis.TicTacToeInterfaceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-01-28T18:02:43" hostname="Scott-Laptop" time="0.089">
   <properties/>
-  <testcase name="testIfXHasWonThroughTheInterface" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.123"/>
-  <testcase name="testIsTheBoardFullThroughTheInterface" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.025"/>
-  <testcase name="testColumnThreeWin" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.015"/>
-  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.001"/>
-  <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.001"/>
-  <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.004"/>
+  <testcase name="testIfXHasWonThroughTheInterface" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.065"/>
+  <testcase name="testIsTheBoardFullThroughTheInterface" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.009"/>
+  <testcase name="testColumnThreeWin" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.001"/>
+  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.008"/>
+  <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.0"/>
+  <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.0"/>
   <system-out><![CDATA[
  |X| 
 -----

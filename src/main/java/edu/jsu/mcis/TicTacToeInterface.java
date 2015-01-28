@@ -56,7 +56,8 @@ public class TicTacToeInterface{
 	
 	public void sendDataToBoard(int row, int column){
 		game.markLocation(row, column);
-		drawBoard();
+		drawBoard();        
+        game.checkToSeeIfTheGameIsOver();
 	}
 	
 	public String whoControlsThisTile(int row, int column){

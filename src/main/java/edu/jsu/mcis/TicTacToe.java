@@ -39,7 +39,6 @@ public class TicTacToe{
 						board[row][col] = PLAYER_2_SYMBOL;
 						break;
 				}
-				checkToSeeIfTheGameIsOver();
 				currentTurn++;
 			}
 		}
@@ -55,7 +54,7 @@ public class TicTacToe{
 		}
 	}
 	
-	public boolean isThereADiagonalWinner(){
+	private boolean isThereADiagonalWinner(){
 		if(board[0][0].equals(board[1][1]) && board[0][0].equals(board[2][2]) && !board[0][0].equals(EMPTY_SPACE_SYMBOL)){
 			winner = board[0][0];
 			return true;
@@ -67,7 +66,7 @@ public class TicTacToe{
 		}
 	}
 	
-	public boolean isThereAHorizontalWinner(){
+	private boolean isThereAHorizontalWinner(){
 		for(int i = 0; i < 3; i++){
 			if(board[i][0].equals(board[i][1]) && board[i][0].equals(board[i][2]) && !board[i][0].equals(EMPTY_SPACE_SYMBOL)){
 				winner = board[i][0];
@@ -77,7 +76,7 @@ public class TicTacToe{
 		return false;
 	}
 	
-	public boolean isThereAVerticalWinner(){
+	private boolean isThereAVerticalWinner(){
 		for(int i = 0; i < 3; i++){
 			if(board[0][i].equals(board[1][i]) && board[0][i].equals(board[2][i]) && !board[0][i].equals(EMPTY_SPACE_SYMBOL)){
 				winner = board[0][i];
@@ -87,7 +86,7 @@ public class TicTacToe{
 		return false;
 	}
 	
-	public boolean isTheBoardFull(){
+	private boolean isTheBoardFull(){
 		boolean thereAreNoEmptySpaces = true;
 		int i = 0;
 		while(i<3 && thereAreNoEmptySpaces){
@@ -104,12 +103,13 @@ public class TicTacToe{
 	}
 	
 	public String whoseTurnIsIt(){
-		if(currentTurn%2 == 0){
-			return PLAYER_1_SYMBOL;
-		}else if(currentTurn%2 == 1){
-			return PLAYER_2_SYMBOL;
-		}else{
-			return EMPTY_SPACE_SYMBOL;
+		switch(currentTurn%2){
+			case 0:
+                return PLAYER_1_SYMBOL;
+            case 1:
+                return PLAYER_2_SYMBOL;
+            default:
+                return EMPTY_SPACE_SYMBOL;
 		}
 	}
 	
