@@ -15,8 +15,8 @@ public class TicTacToeTest{
 	public void testTileWrittenWithX(){
 		setupTests();
 		game.markLocation(0,0);
-        assertEquals("O",game.whoseTurnIsIt());
-		assertEquals("X",game.whoControlsTheTileAt(0,0));
+        assertEquals("O",game.getTurnPlayer());
+		assertEquals("X",game.getTileAt(0,0));
 	}
 	
 	@Test
@@ -24,8 +24,8 @@ public class TicTacToeTest{
 		setupTests();
 		game.markLocation(0,0);
 		game.markLocation(1,0);
-        assertEquals("X",game.whoseTurnIsIt());
-		assertEquals("O",game.whoControlsTheTileAt(1,0));
+        assertEquals("X",game.getTurnPlayer());
+		assertEquals("O",game.getTileAt(1,0));
 	}
 	
 	@Test
@@ -33,7 +33,7 @@ public class TicTacToeTest{
 		setupTests();
 		game.markLocation(0,0);		
 		game.markLocation(0,0);
-		assertEquals("X",game.whoControlsTheTileAt(0,0));
+		assertEquals("X",game.getTileAt(0,0));
 	}
 	
 	@Test
@@ -44,8 +44,8 @@ public class TicTacToeTest{
 		game.markLocation(1,1);
 		game.markLocation(2,0);
 		game.markLocation(2,2);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -56,8 +56,8 @@ public class TicTacToeTest{
 		game.markLocation(1,1);
 		game.markLocation(0,1);
 		game.markLocation(2,0);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -68,8 +68,8 @@ public class TicTacToeTest{
 		game.markLocation(0,1);
 		game.markLocation(2,0);
 		game.markLocation(0,2);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -80,8 +80,8 @@ public class TicTacToeTest{
 		game.markLocation(1,1);
 		game.markLocation(0,1);
 		game.markLocation(1,2);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -93,8 +93,8 @@ public class TicTacToeTest{
 		game.markLocation(2,1);
 		game.markLocation(1,0);
 		game.markLocation(2,2);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("O",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("O",game.getWinner());
 	}
 	
 	@Test
@@ -105,8 +105,8 @@ public class TicTacToeTest{
 		game.markLocation(1,0);
 		game.markLocation(0,2);
 		game.markLocation(2,0);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -117,8 +117,8 @@ public class TicTacToeTest{
 		game.markLocation(1,1);
 		game.markLocation(0,2);
 		game.markLocation(2,1);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("X",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("X",game.getWinner());
 	}
 	
 	@Test
@@ -130,8 +130,8 @@ public class TicTacToeTest{
 		game.markLocation(1,2);
 		game.markLocation(0,1);
 		game.markLocation(2,2);
-        game.checkToSeeIfTheGameIsOver();
-		assertEquals("O",game.whoIsTheWinner());
+        game.checkForGameOver();
+		assertEquals("O",game.getWinner());
 	}
 	
 	@Test
@@ -142,9 +142,9 @@ public class TicTacToeTest{
 		game.markLocation(1,1);
 		game.markLocation(0,2);
 		game.markLocation(2,1);	
-        game.checkToSeeIfTheGameIsOver();
+        game.checkForGameOver();
 		game.markLocation(2,2);
-		assertEquals(" ",game.whoControlsTheTileAt(2,2));
+		assertEquals(" ",game.getTileAt(2,2));
 	}
 	
 	@Test
@@ -159,7 +159,7 @@ public class TicTacToeTest{
 		game.markLocation(1,0);			
 		game.markLocation(1,1);	
 		game.markLocation(1,2);
-        game.checkToSeeIfTheGameIsOver();
+        game.checkForGameOver();
 		assertEquals(true,game.isTheGameOver());
 	}
 }

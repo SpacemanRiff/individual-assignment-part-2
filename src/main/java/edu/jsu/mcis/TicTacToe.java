@@ -44,11 +44,11 @@ public class TicTacToe{
 		}
 	}
 	
-	public String whoControlsTheTileAt(int row, int col){
+	public String getTileAt(int row, int col){
 		return board[row][col];
 	}
 	
-	public void checkToSeeIfTheGameIsOver(){
+	public void checkForGameOver(){
 		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner() || isTheBoardFull()){
 			isTheGameStillGoing = false;
 		}
@@ -102,7 +102,7 @@ public class TicTacToe{
 		return thereAreNoEmptySpaces;
 	}
 	
-	public String whoseTurnIsIt(){
+	public String getTurnPlayer(){
 		switch(currentTurn%2){
 			case 0:
                 return PLAYER_1_SYMBOL;
@@ -117,7 +117,7 @@ public class TicTacToe{
 		return !isTheGameStillGoing;
 	}
 	
-	public String whoIsTheWinner(){
+	public String getWinner(){
 		return winner;
 	}
 }

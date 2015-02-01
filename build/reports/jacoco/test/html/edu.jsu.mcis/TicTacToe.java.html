@@ -44,21 +44,21 @@ public class TicTacToe{
 		}
 <span class="fc" id="L45">	}</span>
 	
-	public String whoControlsTheTileAt(int row, int col){
+	public String getTileAt(int row, int col){
 <span class="fc" id="L48">		return board[row][col];</span>
 	}
 	
-	public void checkToSeeIfTheGameIsOver(){
-<span class="fc bfc" id="L52" title="All 8 branches covered.">		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner() || isTheBoardFull()){</span>
+	public void checkForGameOver(){
+<span class="pc bpc" id="L52" title="1 of 8 branches missed.">		if(isThereADiagonalWinner() || isThereAHorizontalWinner() || isThereAVerticalWinner() || isTheBoardFull()){</span>
 <span class="fc" id="L53">			isTheGameStillGoing = false;</span>
 		}
 <span class="fc" id="L55">	}</span>
 	
 	private boolean isThereADiagonalWinner(){
-<span class="fc bfc" id="L58" title="All 6 branches covered.">		if(board[0][0].equals(board[1][1]) &amp;&amp; board[0][0].equals(board[2][2]) &amp;&amp; !board[0][0].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="pc bpc" id="L58" title="1 of 6 branches missed.">		if(board[0][0].equals(board[1][1]) &amp;&amp; board[0][0].equals(board[2][2]) &amp;&amp; !board[0][0].equals(EMPTY_SPACE_SYMBOL)){</span>
 <span class="fc" id="L59">			winner = board[0][0];</span>
 <span class="fc" id="L60">			return true;</span>
-<span class="fc bfc" id="L61" title="All 6 branches covered.">		}else if(board[0][2].equals(board[1][1]) &amp;&amp; board[0][2].equals(board[2][0]) &amp;&amp; !board[0][2].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="pc bpc" id="L61" title="1 of 6 branches missed.">		}else if(board[0][2].equals(board[1][1]) &amp;&amp; board[0][2].equals(board[2][0]) &amp;&amp; !board[0][2].equals(EMPTY_SPACE_SYMBOL)){</span>
 <span class="fc" id="L62">			winner = board[0][2];</span>
 <span class="fc" id="L63">			return true;</span>
 		}else{		
@@ -68,7 +68,7 @@ public class TicTacToe{
 	
 	private boolean isThereAHorizontalWinner(){
 <span class="fc bfc" id="L70" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
-<span class="fc bfc" id="L71" title="All 6 branches covered.">			if(board[i][0].equals(board[i][1]) &amp;&amp; board[i][0].equals(board[i][2]) &amp;&amp; !board[i][0].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="pc bpc" id="L71" title="1 of 6 branches missed.">			if(board[i][0].equals(board[i][1]) &amp;&amp; board[i][0].equals(board[i][2]) &amp;&amp; !board[i][0].equals(EMPTY_SPACE_SYMBOL)){</span>
 <span class="fc" id="L72">				winner = board[i][0];</span>
 <span class="fc" id="L73">				return true;</span>
 			}
@@ -78,7 +78,7 @@ public class TicTacToe{
 	
 	private boolean isThereAVerticalWinner(){
 <span class="fc bfc" id="L80" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
-<span class="fc bfc" id="L81" title="All 6 branches covered.">			if(board[0][i].equals(board[1][i]) &amp;&amp; board[0][i].equals(board[2][i]) &amp;&amp; !board[0][i].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="pc bpc" id="L81" title="1 of 6 branches missed.">			if(board[0][i].equals(board[1][i]) &amp;&amp; board[0][i].equals(board[2][i]) &amp;&amp; !board[0][i].equals(EMPTY_SPACE_SYMBOL)){</span>
 <span class="fc" id="L82">				winner = board[0][i];</span>
 <span class="fc" id="L83">				return true;</span>
 			}
@@ -89,11 +89,11 @@ public class TicTacToe{
 	private boolean isTheBoardFull(){
 <span class="fc" id="L90">		boolean thereAreNoEmptySpaces = true;</span>
 <span class="fc" id="L91">		int i = 0;</span>
-<span class="fc bfc" id="L92" title="All 4 branches covered.">		while(i&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
+<span class="pc bpc" id="L92" title="1 of 4 branches missed.">		while(i&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
 <span class="fc" id="L93">			int j = 0;</span>
-<span class="fc bfc" id="L94" title="All 4 branches covered.">			while(j&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
-<span class="fc bfc" id="L95" title="All 2 branches covered.">				if(board[i][j].equals(EMPTY_SPACE_SYMBOL)){</span>
-<span class="fc" id="L96">					thereAreNoEmptySpaces = false;</span>
+<span class="pc bpc" id="L94" title="1 of 4 branches missed.">			while(j&lt;3 &amp;&amp; thereAreNoEmptySpaces){</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">				if(board[i][j].equals(EMPTY_SPACE_SYMBOL)){</span>
+<span class="nc" id="L96">					thereAreNoEmptySpaces = false;</span>
 				}
 <span class="fc" id="L98">				j++;</span>
 			}
@@ -102,7 +102,7 @@ public class TicTacToe{
 <span class="fc" id="L102">		return thereAreNoEmptySpaces;</span>
 	}
 	
-	public String whoseTurnIsIt(){
+	public String getTurnPlayer(){
 <span class="pc bpc" id="L106" title="1 of 3 branches missed.">		switch(currentTurn%2){</span>
 			case 0:
 <span class="fc" id="L108">                return PLAYER_1_SYMBOL;</span>
@@ -117,7 +117,7 @@ public class TicTacToe{
 <span class="pc bpc" id="L117" title="1 of 2 branches missed.">		return !isTheGameStillGoing;</span>
 	}
 	
-	public String whoIsTheWinner(){
+	public String getWinner(){
 <span class="fc" id="L121">		return winner;</span>
 	}
 }
