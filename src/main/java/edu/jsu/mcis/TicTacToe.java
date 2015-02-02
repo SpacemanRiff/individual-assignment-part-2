@@ -35,7 +35,7 @@ public class TicTacToe{
 					case 0: 
 						board[row][col] = PLAYER_1_SYMBOL;
 						break;
-					case 1: 
+					default: 
 						board[row][col] = PLAYER_2_SYMBOL;
 						break;
 				}
@@ -106,10 +106,8 @@ public class TicTacToe{
 		switch(currentTurn%2){
 			case 0:
                 return PLAYER_1_SYMBOL;
-            case 1:
-                return PLAYER_2_SYMBOL;
             default:
-                return EMPTY_SPACE_SYMBOL;
+                return PLAYER_2_SYMBOL;
 		}
 	}
 	

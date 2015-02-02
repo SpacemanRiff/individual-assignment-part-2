@@ -24,18 +24,21 @@ public class TicTacToeInterfaceTest{
 	public void testTileCannotBeOverWritten(){
 		TicTacToeInterface gameInterface = new TicTacToeInterface();	
 		gameInterface.sendDataToBoard(0,0);		
+		gameInterface.checkForWin();
 		gameInterface.sendDataToBoard(0,0);
 		assertEquals("X",gameInterface.whoControlsThisTile(0,0));
 	}	
 	
-	/*@Test
-	public void testGameWonForX(){
+	@Test
+	public void testNoPlacesOnceGameIsOver(){
 		TicTacToeInterface gameInterface = new TicTacToeInterface();
-		game.markLocation(0,1);
-		game.markLocation(0,0);		
-		game.markLocation(1,1);
-		game.markLocation(0,2);
-		game.markLocation(2,1);
-		assertEquals("X",gameInterface.whoControlsThisTile(0,0));
-	}	*/
+		gameInterface.sendDataToBoard(0,1);
+		gameInterface.sendDataToBoard(0,0);		
+		gameInterface.sendDataToBoard(1,1);
+		gameInterface.sendDataToBoard(0,2);
+		gameInterface.sendDataToBoard(2,1);	
+		gameInterface.checkForWin();
+		gameInterface.sendDataToBoard(2,2);
+		assertEquals(" ",gameInterface.whoControlsThisTile(2,2));		
+	}
 }

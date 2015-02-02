@@ -33,7 +33,45 @@ public class TicTacToeTest{
 		setupTests();
 		game.markLocation(0,0);		
 		game.markLocation(0,0);
+        game.checkForGameOver();
+        game.isTheGameOver();
 		assertEquals("X",game.getTileAt(0,0));
+	}
+	
+	@Test
+	public void testXTileCannotBePlacedOffBoard(){		
+		setupTests();
+		game.markLocation(-1,-1);
+		game.markLocation(3,3);
+		game.markLocation(-1,3);
+		game.markLocation(3,-1);
+		game.markLocation(0,3);
+		game.markLocation(0,-1);
+		game.markLocation(-1,0);
+		game.markLocation(3,0);
+        assertEquals("X",game.getTurnPlayer());
+	}
+	
+	@Test
+	public void testOTileCannotBePlacedOffBoard(){
+		setupTests();
+		game.markLocation(0,0);
+		game.markLocation(-1,-1);
+		game.markLocation(3,3);
+		game.markLocation(-1,3);
+		game.markLocation(3,-1);
+		game.markLocation(0,3);
+		game.markLocation(0,-1);
+		game.markLocation(-1,0);
+		game.markLocation(3,0);
+        assertEquals("O",game.getTurnPlayer());
+	}
+	
+	@Test
+	public void testNoWinnersAtStart(){
+		setupTests();
+		game.checkForGameOver();
+		assertEquals(false, game.isTheGameOver());
 	}
 	
 	@Test
