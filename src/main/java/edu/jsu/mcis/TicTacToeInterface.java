@@ -55,10 +55,10 @@ public class TicTacToeInterface extends JFrame{
 	public void checkForWin(){
 		game.checkForGameOver();
 		if(game.isTheGameOver()){
-			if(!game.getWinner().equals(game.EMPTY_SPACE_SYMBOL)){
-				JOptionPane.showMessageDialog(this, "The winner is " + game.getWinner(), "Game Over");
+			if(!game.getWinner().equals("TIE")){
+				JOptionPane.showMessageDialog(null, "The winner is " + game.getWinner(), "Game Over", JOptionPane.ERROR_MESSAGE);
 			}else{				
-				JOptionPane.showMessageDialog(this, "Tie game!", "Game Over");
+				JOptionPane.showMessageDialog(null, "Tie game", "Game Over", JOptionPane.ERROR_MESSAGE);
 			}			
 		}
 	}

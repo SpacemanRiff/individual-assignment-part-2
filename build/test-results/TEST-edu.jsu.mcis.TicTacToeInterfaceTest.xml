@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeInterfaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-02-01T21:49:35" hostname="Scott-PC" time="0.242">
+<testsuite name="edu.jsu.mcis.TicTacToeInterfaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-02-02T01:43:50" hostname="Scott-PC" time="0.345">
   <properties/>
-  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.203"/>
-  <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.026"/>
-  <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.013"/>
+  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.295"/>
+  <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.036"/>
+  <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeInterfaceTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
