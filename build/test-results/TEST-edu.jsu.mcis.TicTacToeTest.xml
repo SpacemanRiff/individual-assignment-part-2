@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2015-02-01T19:57:54" hostname="Scott-PC" time="0.007">
+<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2015-02-01T21:49:35" hostname="Scott-PC" time="0.006">
   <properties/>
   <testcase name="testTopLeftToBottomRightWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testColumnThreeWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
@@ -7,7 +7,7 @@
   <testcase name="testIsTheBoardFull" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testColumnOneWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testColumnTwoWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
+  <testcase name="testTileWrittenWithO" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTileWrittenWithX" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testTileCannotBeOverWritten" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
   <testcase name="testRowThreeWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>

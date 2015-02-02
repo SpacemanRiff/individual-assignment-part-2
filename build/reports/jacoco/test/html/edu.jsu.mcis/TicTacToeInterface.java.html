@@ -7,65 +7,76 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import java.awt.GridLayout;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import java.io.IOException;
 import java.awt.Dimension;
 
-public class TicTacToeInterface extends JPanel{		
+public class TicTacToeInterface extends JFrame{		
 	private TicTacToe game;
 	public JButton[][] ticTacToeButtons;
 	public JLabel displayLabel;
 	
-<span class="fc" id="L21">	public TicTacToeInterface(){</span>
-<span class="fc" id="L22">		game = new TicTacToe();</span>
-<span class="fc" id="L23">		ticTacToeButtons = new JButton[3][3];</span>
-<span class="fc" id="L24">		displayLabel = new JLabel(&quot;It is currently &quot; + game.getTurnPlayer() + &quot;\'s turn.&quot;);</span>
+<span class="fc" id="L22">	public TicTacToeInterface(){</span>
+<span class="fc" id="L23">		game = new TicTacToe();</span>
+<span class="fc" id="L24">		ticTacToeButtons = new JButton[3][3];</span>
+<span class="fc" id="L25">		displayLabel = new JLabel(&quot;It is currently &quot; + game.getTurnPlayer() + &quot;\'s turn.&quot;);</span>
 		
-<span class="fc" id="L26">		setLayout(new GridLayout(3,3));</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">			for(int j = 0; j &lt; 3; j++){</span>
-<span class="fc" id="L29">				ticTacToeButtons[i][j] = new JButton(game.getTileAt(i,j));</span>
-<span class="fc" id="L30">				ticTacToeButtons[i][j].addActionListener(new ButtonListener(i,j));</span>
-<span class="fc" id="L31">				ticTacToeButtons[i][j].setName(&quot;Location&quot; + i + j);</span>
-<span class="fc" id="L32">				add(ticTacToeButtons[i][j]);</span>
+<span class="fc" id="L27">		setLayout(new GridLayout(3,3));</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">			for(int j = 0; j &lt; 3; j++){</span>
+<span class="fc" id="L30">				ticTacToeButtons[i][j] = new JButton(game.getTileAt(i,j));</span>
+<span class="fc" id="L31">				ticTacToeButtons[i][j].addActionListener(new ButtonListener(i,j));</span>
+<span class="fc" id="L32">				ticTacToeButtons[i][j].setName(&quot;Location&quot; + i + j);</span>
+<span class="fc" id="L33">				add(ticTacToeButtons[i][j]);</span>
 			}
-		}
-<span class="fc" id="L35">		setSize(300,300);</span>
-<span class="fc" id="L36">	}</span>
+		}	
+
+<span class="fc" id="L37">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L38">		setTitle(&quot;Tic Tac Toe&quot;);</span>
+<span class="fc" id="L39">		pack();</span>
+<span class="fc" id="L40">		setResizable(false);</span>
+<span class="fc" id="L41">		setSize(300,300);</span>
+<span class="fc" id="L42">		setVisible(true);</span>
+<span class="fc" id="L43">	}</span>
 	
 	public void sendDataToBoard(int row, int column){
-<span class="fc" id="L39">		game.markLocation(row, column);</span>
-<span class="fc" id="L40">		ticTacToeButtons[row][column].setText(game.getTileAt(row,column));</span>
-<span class="fc" id="L41">	}</span>
+<span class="fc" id="L46">		game.markLocation(row, column);</span>
+<span class="fc" id="L47">		ticTacToeButtons[row][column].setText(game.getTileAt(row,column));</span>
+<span class="fc" id="L48">	}</span>
 	
 	public String whoControlsThisTile(int row, int column){
-<span class="fc" id="L44">		return ticTacToeButtons[row][column].getText();</span>
+<span class="fc" id="L51">		return ticTacToeButtons[row][column].getText();</span>
 	}
 	
+	public void checkForWin(){
+<span class="nc" id="L55">		game.checkForGameOver();</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">		if(game.isTheGameOver()){</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">			if(!game.getWinner().equals(game.EMPTY_SPACE_SYMBOL)){</span>
+<span class="nc" id="L58">				JOptionPane.showMessageDialog(this, &quot;The winner is &quot; + game.getWinner());</span>
+			}else{				
+<span class="nc" id="L60">				JOptionPane.showMessageDialog(this, &quot;Tie game!&quot;);</span>
+			}			
+		}
+<span class="nc" id="L63">	}</span>
+	
 	public static void main(String[] args){		
-<span class="nc" id="L48">		TicTacToeInterface gameInterface = new TicTacToeInterface();</span>
-<span class="nc" id="L49">		JFrame frame = new JFrame(&quot;Tic Tac Toe :^)&quot;);</span>
-<span class="nc" id="L50">		frame.add(gameInterface);		</span>
-
-<span class="nc" id="L52">		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L53">		frame.pack();</span>
-<span class="nc" id="L54">		frame.setResizable(false);</span>
-<span class="nc" id="L55">		frame.setSize(300,300);</span>
-<span class="nc" id="L56">		frame.setVisible(true);</span>
-<span class="nc" id="L57">	}</span>
+<span class="nc" id="L66">		TicTacToeInterface gameInterface = new TicTacToeInterface();</span>
+<span class="nc" id="L67">	}</span>
 	
 	public class ButtonListener implements ActionListener{
 		int row, column;
-<span class="fc" id="L61">		public ButtonListener(int row, int column){</span>
-<span class="fc" id="L62">			this.row = row;</span>
-<span class="fc" id="L63">			this.column = column;</span>
-<span class="fc" id="L64">		}</span>
+<span class="fc" id="L71">		public ButtonListener(int row, int column){</span>
+<span class="fc" id="L72">			this.row = row;</span>
+<span class="fc" id="L73">			this.column = column;</span>
+<span class="fc" id="L74">		}</span>
 		
 		public void actionPerformed(ActionEvent e){
-<span class="nc" id="L67">			sendDataToBoard(row, column);</span>
-<span class="nc" id="L68">		}</span>
+<span class="nc" id="L77">			sendDataToBoard(row, column);</span>
+<span class="nc" id="L78">			checkForWin();</span>
+<span class="nc" id="L79">		}</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

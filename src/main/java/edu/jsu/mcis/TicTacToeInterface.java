@@ -7,13 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import java.awt.GridLayout;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import java.io.IOException;
 import java.awt.Dimension;
 
-public class TicTacToeInterface extends JPanel{		
+public class TicTacToeInterface extends JFrame{		
 	private TicTacToe game;
 	public JButton[][] ticTacToeButtons;
 	public JLabel displayLabel;
@@ -31,8 +32,15 @@ public class TicTacToeInterface extends JPanel{
 				ticTacToeButtons[i][j].setName("Location" + i + j);
 				add(ticTacToeButtons[i][j]);
 			}
-		}
+		}	
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Tic Tac Toe");
+		setName("Tic Tac Toe");
+		pack();
+		setResizable(false);
 		setSize(300,300);
+		setVisible(true);
 	}
 	
 	public void sendDataToBoard(int row, int column){
@@ -46,21 +54,17 @@ public class TicTacToeInterface extends JPanel{
 	
 	public void checkForWin(){
 		game.checkForGameOver();
-		if(isTheGameOver()){
-			
+		if(game.isTheGameOver()){
+			if(!game.getWinner().equals(game.EMPTY_SPACE_SYMBOL)){
+				JOptionPane.showMessageDialog(this, "The winner is " + game.getWinner(), "Game Over");
+			}else{				
+				JOptionPane.showMessageDialog(this, "Tie game!", "Game Over");
+			}			
 		}
 	}
 	
 	public static void main(String[] args){		
 		TicTacToeInterface gameInterface = new TicTacToeInterface();
-		JFrame frame = new JFrame("Tic Tac Toe :^)");
-		frame.add(gameInterface);		
-
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-		frame.setResizable(false);
-		frame.setSize(300,300);
-		frame.setVisible(true);
 	}
 	
 	public class ButtonListener implements ActionListener{
@@ -72,7 +76,7 @@ public class TicTacToeInterface extends JPanel{
 		
 		public void actionPerformed(ActionEvent e){
 			sendDataToBoard(row, column);
-			checkForGameOver();
+			checkForWin();
 		}
 	}
 }
