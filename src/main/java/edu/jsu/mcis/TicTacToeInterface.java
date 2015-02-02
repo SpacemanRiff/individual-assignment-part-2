@@ -3,16 +3,11 @@ package edu.jsu.mcis;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.JOptionPane;
 import java.awt.GridLayout;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import java.io.IOException;
 import java.awt.Dimension;
+import java.awt.event.*;
 
 public class TicTacToeInterface extends JFrame{		
 	private TicTacToe game;
@@ -55,11 +50,15 @@ public class TicTacToeInterface extends JFrame{
 	public void checkForWin(){
 		game.checkForGameOver();
 		if(game.isTheGameOver()){
-			if(!game.getWinner().equals("TIE")){
-				JOptionPane.showMessageDialog(null, "The winner is " + game.getWinner(), "Game Over", JOptionPane.ERROR_MESSAGE);
-			}else{				
-				JOptionPane.showMessageDialog(null, "Tie game", "Game Over", JOptionPane.ERROR_MESSAGE);
-			}			
+            int delay = 1000;
+            ActionListener taskPerformer = new ActionListener(){
+                public void actionPerformed(ActionEvent evt){
+                    JOptionPane.showMessageDialog(null, "The winner is " + game.getWinner(), "Game Over", JOptionPane.PLAIN_MESSAGE);	                    
+                }
+            };
+            Timer myTimer = new Timer(delay, taskPerformer);
+            myTimer.setRepeats(false);
+            myTimer.start();
 		}
 	}
 	

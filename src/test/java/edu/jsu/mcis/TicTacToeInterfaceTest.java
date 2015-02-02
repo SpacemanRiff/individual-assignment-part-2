@@ -27,4 +27,15 @@ public class TicTacToeInterfaceTest{
 		gameInterface.sendDataToBoard(0,0);
 		assertEquals("X",gameInterface.whoControlsThisTile(0,0));
 	}	
+	
+	/*@Test
+	public void testGameWonForX(){
+		TicTacToeInterface gameInterface = new TicTacToeInterface();
+		game.markLocation(0,1);
+		game.markLocation(0,0);		
+		game.markLocation(1,1);
+		game.markLocation(0,2);
+		game.markLocation(2,1);
+		assertEquals("X",gameInterface.whoControlsThisTile(0,0));
+	}	*/
 }

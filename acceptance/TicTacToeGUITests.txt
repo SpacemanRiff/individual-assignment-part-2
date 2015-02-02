@@ -12,7 +12,8 @@ Mark Location   [Arguments]     ${row}      ${col}
 
 Check Location  [Arguments]     ${row}  ${col}  ${mark}
     ${component}=   Catenate    SEPARATOR=  Location    ${row}  ${col}
-    Label Text Should Be    ${component}    ${mark}
+    ${buttonText}=  Get Button Text    ${component}
+    Should Be Equal   ${buttonText}    ${mark}
     
 Winner Should Be    [Arguments]     ${winner}
     Select Dialog   Game Over
