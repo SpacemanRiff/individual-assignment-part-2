@@ -34,6 +34,7 @@ public class TicTacToeInterface extends JFrame{
 		setName("Tic Tac Toe");
 		pack();
 		setResizable(false);
+        setLocationRelativeTo(null);
 		setSize(300,300);
 		setVisible(true);
 	}
@@ -50,7 +51,7 @@ public class TicTacToeInterface extends JFrame{
 	public void checkForWin(){
 		game.checkForGameOver();
 		if(game.isTheGameOver()){
-            int delay = 1000;
+            int delay = 500;
             ActionListener taskPerformer = new ActionListener(){
                 public void actionPerformed(ActionEvent evt){
                     JOptionPane.showMessageDialog(null, "The winner is " + game.getWinner(), "Game Over", JOptionPane.PLAIN_MESSAGE);	                    
